@@ -6,11 +6,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
-import ListSubheader from "@mui/material/ListSubheader";
 import Collapse from "@mui/material/Collapse";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Typography from "@mui/material/Typography";
-import StarBorder from "@mui/icons-material/StarBorder";
 import Divider from "@mui/material/Divider";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -18,11 +15,10 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-// import ListItem from '@mui/material/ListItem';
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import Router from "../Routes/Routes";
+import Router from "../../Routes/Routes";
+import './Sidebar.css'
 
 const drawerWidth = 240;
 
@@ -73,7 +69,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 function Sidebar() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const [collapse, setCollapse] = React.useState(false);
 
   const handleDrawerOpen = () => {
