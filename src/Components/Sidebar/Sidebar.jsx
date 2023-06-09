@@ -19,6 +19,10 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Router from "../../Routes/Routes";
 import './Sidebar.css'
+import { ListItemIcon } from "@mui/material";
+import { StarBorder } from "@mui/icons-material";
+import { Link } from "react-router-dom";
+
 
 const drawerWidth = 240;
 
@@ -127,36 +131,55 @@ function Sidebar() {
           component="nav"
           aria-labelledby="nested-list-subheader"
         >
-          <ListItemButton>
-            <ListItemText primary="Dashboard" />
-          </ListItemButton>
+          <Link to="/Dashboard">
+            <ListItemButton>
+              <ListItemText primary="Dashboard" />
+            </ListItemButton></Link>
+
           <ListItemButton onClick={handleClick}>
             <ListItemText primary="Accounts" />
             {collapse ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           </ListItemButton>
+
+          {/* <Collapse in={collapse} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <ListItemButton>
+                                <ListItemText primary="Add Clients" className="collapse" />
+                            </ListItemButton>
+                            <ListItemButton>
+                                <ListItemText primary="View Clients" className="collapse" />
+                            </ListItemButton>
+
+                        </List>
+                    </Collapse> */}
           <Collapse in={collapse} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton>
-                <ListItemText primary="Add Clients" className="collapse" />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemText primary="View Clients" className="collapse" />
-              </ListItemButton>
+              <Link to="Addclient">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemText primary="Add Clients" />
+                </ListItemButton></Link>
+              <Link to="Viewclient">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemText primary="View Clients" />
+                </ListItemButton></Link>
 
             </List>
           </Collapse>
-              <ListItemButton>
-                <ListItemText primary="Transactions" />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemText primary="Client" />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemText primary="Invoice" />
-              </ListItemButton>
-              <ListItemButton>
-                <ListItemText primary="Settings" />
-              </ListItemButton>
+          <Link to="/Transactions">
+            <ListItemButton>
+              <ListItemText primary="Transactions" />
+            </ListItemButton></Link>
+          <Link to="Viewclient">
+            <ListItemButton>
+              <ListItemText primary="Client" />
+            </ListItemButton></Link>
+          <Link to="Viewinvoice">
+            <ListItemButton>
+              <ListItemText primary="Invoice" />
+            </ListItemButton></Link>
+          <ListItemButton>
+            <ListItemText primary="Settings" />
+          </ListItemButton>
         </List>
       </Drawer>
       <Main open={open}>

@@ -1,0 +1,40 @@
+.circle0{
+    background: #FFFFFF;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 65px;
+}
+.addbtn{
+    display: flex;
+    justify-content: space-between;
+}
+.search01{
+    height: 35px;
+    background: rgba(217, 217, 217, 0.3);
+/* border: 1px solid rgba(49, 29, 29, 0.6); */
+border-radius: 8px;
+width: 200px;
+border: none;
+outline: none;
+background-color: transparent;
+}
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 5px;
+    height: 50px;
+}
+.line1{
+    border-bottom: 2px solid black;
+}
+.invoice01{
+ color: rgb(6, 6, 51);
+ 
+}
+.pagination-3{
+    margin-left: 700px;
+    margin-top: 10px;
+}
