@@ -1,7 +1,15 @@
 .collapse{
     display: block;
 }
-/*.link{*/
-/*    text-decoration: none;*/
-/*    color: black;*/
-/*}*/
+.Logo{
+    position: absolute;
+width: 210px;
+height: 57px;
+left: 7px;
+top: 7px;
+
+}
+.sidebar-links{
+    text-decoration: none;
+    color:black;
+}

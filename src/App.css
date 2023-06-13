@@ -24,6 +24,10 @@
   color: white;
 }
 
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+  box-shadow: 24px 5px 11px -102px rgba(0,0,0,0.2), 2px 2px 0px -7px rgba(0,0,0,0.14), 1px 2px 8px -1px rgba(0,0,0,0.12) !important;
+}
+
 .App-link {
   color: #61dafb;
 }

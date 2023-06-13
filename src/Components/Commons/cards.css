@@ -1,0 +1,54 @@
+.card1item {
+  font-family: "Poppins" !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  line-height: 36px !important;
+  color: #595573 !important;
+  text-align: right !important;
+}
+.card1itemword {
+  font-family: "Poppins" !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  line-height: 36px !important;
+  text-align: right !important;
+}
+.card2item {
+  font-family: "Poppins" !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  line-height: 36px !important;
+  text-align: right !important;
+  color: #1f935a !important;
+}
+.card2itemword {
+  font-family: "Poppins" !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  line-height: 36px !important;
+  text-align: right !important;
+  color: #000000 !important;
+}
+.card3item{
+    font-family: 'Poppins'!important;
+font-style: normal!important;
+font-weight: 700!important;
+font-size: 24px!important;
+line-height: 36px!important;
+text-align: right!important;
+color: #FF0202!important;
+}
+.card3itemword {
+    font-family: "Poppins" !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    line-height: 36px !important;
+    text-align: right !important;
+    color: #000000 !important;
+  }
+  

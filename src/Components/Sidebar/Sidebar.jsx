@@ -19,8 +19,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Router from "../../Routes/Routes";
 import './Sidebar.css'
-import { ListItemIcon } from "@mui/material";
-import { StarBorder } from "@mui/icons-material";
+import Image from '../Images/logo.jpg'
 import { Link } from "react-router-dom";
 
 
@@ -117,6 +116,7 @@ function Sidebar() {
         open={open}
       >
         <DrawerHeader>
+          <Link to="/Dashboard"><img src={Image} alt="Logo" className="Logo" /></Link>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
@@ -127,58 +127,48 @@ function Sidebar() {
         </DrawerHeader>
         <Divider />
         <List
-          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper", fontFamily: "poppins" }}
           component="nav"
           aria-labelledby="nested-list-subheader"
         >
-          <Link to="/Dashboard">
-            <ListItemButton>
-              <ListItemText primary="Dashboard" />
+          <Link to="/Dashboard" className="sidebar-links">
+            <ListItemButton >
+              <ListItemText primary="Dashboard"  />
             </ListItemButton></Link>
-
           <ListItemButton onClick={handleClick}>
             <ListItemText primary="Accounts" />
             {collapse ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           </ListItemButton>
 
-          {/* <Collapse in={collapse} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                            <ListItemButton>
-                                <ListItemText primary="Add Clients" className="collapse" />
-                            </ListItemButton>
-                            <ListItemButton>
-                                <ListItemText primary="View Clients" className="collapse" />
-                            </ListItemButton>
-
-                        </List>
-                    </Collapse> */}
           <Collapse in={collapse} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <Link to="Addclient">
+              <Link to="/Addincome" className="sidebar-links">
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="Add Clients" />
+                  <ListItemText primary="Add Income" />
                 </ListItemButton></Link>
-              <Link to="Viewclient">
+              <Link to="/AddExpense"  className="sidebar-links">
                 <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemText primary="View Clients" />
+                  <ListItemText primary="Add Expense" />
                 </ListItemButton></Link>
 
             </List>
           </Collapse>
-          <Link to="/Transactions">
+          <Link to="/Transactions" className="sidebar-links">
             <ListItemButton>
               <ListItemText primary="Transactions" />
             </ListItemButton></Link>
-          <Link to="Viewclient">
+          <Link to="/Viewclient" className="sidebar-links">
             <ListItemButton>
-              <ListItemText primary="Client" />
+              <ListItemText primary="Clients" />
             </ListItemButton></Link>
-          <Link to="Viewinvoice">
+          <Link to="/Viewinvoice" className="sidebar-links">
             <ListItemButton>
-              <ListItemText primary="Invoice" />
+              <ListItemText primary="Invoices" />
             </ListItemButton></Link>
           <ListItemButton>
+          <Link to="/Settings" className="sidebar-links">
             <ListItemText primary="Settings" />
+          </Link>
           </ListItemButton>
         </List>
       </Drawer>
