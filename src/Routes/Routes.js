@@ -9,6 +9,7 @@ import Viewinvoice from "../Components/Pages/Viewinvoice";
 import Addexpense from "../Components/Pages/AddExpense.jsx";
 import Transactions from "../Components/Pages/Transactions.jsx";
 import Settings from "../Components/Pages/Settings";
+// import New from "../Components/Pages/New.jsx";
 
 const Router = () => {
   return (
@@ -26,7 +27,7 @@ const Router = () => {
       <Route path="/Addinvoice" element={<Addinvoice />} />
       <Route path="/Viewinvoice" element={<Viewinvoice />} />
       <Route path="/Settings" element={<Settings />} />
-    </Routes>
+    {/* <Route path="/New" element={<New/>}/> */}</Routes>
   );
 };
 export default Router;

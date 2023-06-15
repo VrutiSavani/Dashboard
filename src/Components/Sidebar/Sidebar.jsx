@@ -23,6 +23,7 @@ import Image from '../Images/logo.jpg'
 import { Link } from "react-router-dom";
 
 
+
 const drawerWidth = 240;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -74,6 +75,9 @@ function Sidebar() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
   const [collapse, setCollapse] = React.useState(false);
+  const [active, setActive] =React.useState(false);
+  const[dash,setDash]=React.useState(false);
+
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -85,6 +89,7 @@ function Sidebar() {
   const handleClick = () => {
     setCollapse(!collapse);
   };
+
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -135,7 +140,7 @@ function Sidebar() {
             <ListItemButton >
               <ListItemText primary="Dashboard"  />
             </ListItemButton></Link>
-          <ListItemButton onClick={handleClick}>
+          <ListItemButton onClick={handleClick}   style={{ }}>
             <ListItemText primary="Accounts" />
             {collapse ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           </ListItemButton>
@@ -168,7 +173,6 @@ function Sidebar() {
           <ListItemButton>
           <Link to="/Settings" className="sidebar-links">
             <ListItemText primary="Settings" />
-          </Link>
           </ListItemButton>
         </List>
       </Drawer>
